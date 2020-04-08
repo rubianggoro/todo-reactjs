@@ -1,15 +1,29 @@
 import React from 'react';
-import logo from './logo.svg';
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+
+
 import './App.css';
+
+import Header from './componets-child/Header';
+
 import ClassBase from './components/ClassBase';
 import FunctionBase from './components/FunctionBase';
 
 function App() {
   return (
-    <div className="App">
-      {/* <FunctionBase/> */}
-      <ClassBase/>
-    </div>
+    <Router>
+      <div className="App">
+        <Header />
+        <Switch>
+          <Route exact path="/classbase">
+            <ClassBase />
+          </Route>
+          <Route path="/functionbase">
+            <FunctionBase />
+          </Route>
+        </Switch>
+      </div>
+    </Router>
   );
 }
 

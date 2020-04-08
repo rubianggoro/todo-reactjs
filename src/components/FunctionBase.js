@@ -1,6 +1,9 @@
 import React, { useState} from 'react'
 import Todo from './Todo'
 
+import 'bootstrap/dist/css/bootstrap.min.css';
+
+
 const FunctionBase = () => {
     const [todos, setTodos] = useState ([
         {text : "", isComplete: false},
@@ -55,7 +58,7 @@ const FunctionBase = () => {
 
     return (
         <div>
-            <h3>Function Todo</h3>
+            <h1 className="text-primary">Todo With FunctionBase</h1>
 
             <form onSubmit={handleSubmit}>
                 <input type="text" value={value} onChange={handleChange}/>
