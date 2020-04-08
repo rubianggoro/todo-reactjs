@@ -5,7 +5,8 @@ class ClassBase extends Component {
         super()
         this.state = {
             todoList : [],
-            todoInput : ""
+            todoInput : "",
+            isComplete : false,
         }
     }
 
@@ -25,10 +26,30 @@ class ClassBase extends Component {
     
 
 
-    clickDelete = () => {
-        this.setState({
-            todoList: []
-        })
+    clickDelete = (index) => {
+        // console.log("sudah diklik")
+        const newtodoInput = [...this.state.todoList];
+        // console.log(newtodoInput)
+        newtodoInput.splice(index, 1);
+        this.setState({todoList :newtodoInput})
+    }
+
+    clickEdit = (index) => {
+        // console.log("diklik");
+        const newtodoInput = [...this.state.todoList];
+        const editInput = newtodoInput[index];
+        // console.log(editInput)
+        const editedInput = prompt(editInput);
+        newtodoInput.splice(index, 1, editedInput);
+        this.setState({todoList :newtodoInput})
+    }
+
+    clickComplete = (index) => {
+        // console.log("click")
+        const newtodoInput = [...this.state.todoList];
+        newtodoInput[index] = !this.state.todoList[index].isComplete;
+        
+        this.setState({todoList :newtodoInput})
     }
 
 
@@ -43,9 +64,10 @@ class ClassBase extends Component {
                 <button onClick={this.clickAdd}>Add</button>
 
                 {this.state.todoList.map((item, index) =>(
-                    <li key={index}>{item}
-                    <button onClick={this.clickDelete}>Delete</button>
-                    <button>Edit</button></li>
+                    <li key={index} index={index} style={{color: this.state.isComplete ? "green" : ""}}>{item}
+                    <button onClick={() => this.clickDelete(index)}>Delete</button>
+                    <button onClick={() => this.clickEdit(index)}>Edit</button>
+                    <button onClick={() => this.clickComplete(index)}>Complete</button></li>
                 ))}
             </div>
         )
