@@ -6,13 +6,12 @@ import { Link } from "react-router-dom";
 function Header() {
     return (
         <div>
-             <h1>My TODO LIST</h1>
-             <Nav className="justify-content-center" >
+             <Nav className="justify-content-center bg-dark py-3" >
                 <Nav.Item className="mr-5">
-                    <Link to="/classbase">Class Base</Link>
+                    <Link to="/" className="text-white">ClASS BASED</Link>
                 </Nav.Item>
                 <Nav.Item>
-                    <Link to="/functionbase">Function Base</Link>
+                    <Link to="/functionbase" className="text-white">FUNCTION BASED</Link>
                 </Nav.Item>
             </Nav>
         </div>

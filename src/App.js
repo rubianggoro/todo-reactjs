@@ -15,7 +15,7 @@ function App() {
       <div className="App">
         <Header />
         <Switch>
-          <Route exact path="/classbase">
+          <Route exact path="/">
             <ClassBase />
           </Route>
           <Route path="/functionbase">

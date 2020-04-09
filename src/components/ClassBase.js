@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 
 import 'bootstrap/dist/css/bootstrap.min.css';
-import Button from 'react-bootstrap/Button'
+import Button from 'react-bootstrap/Button';
 
 class ClassBase extends Component {
     constructor(){
@@ -62,7 +62,7 @@ class ClassBase extends Component {
     render () {
         return (
             <div>
-                <h1 className="text-secondary">Todo With ClassBase</h1>
+                <h1 className="text-primary mt-5">Todo With ClassBase</h1>
                 <input type="text" name="todoInput" value={this.state.todoInput} onChange={this.clickChange} className="border border-primary" />
                 <Button onClick={this.clickAdd} variant="outline-primary" className="ml-3">Add</Button>
 

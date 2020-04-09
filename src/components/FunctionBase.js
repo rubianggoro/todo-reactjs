@@ -58,11 +58,11 @@ const FunctionBase = () => {
 
     return (
         <div>
-            <h1 className="text-primary">Todo With FunctionBase</h1>
+            <h1 className="text-primary mt-5">Todo With FunctionBase</h1>
 
             <form onSubmit={handleSubmit}>
-                <input type="text" value={value} onChange={handleChange}/>
-                <input type="submit"/>
+                <input className="border border-primary" type="text" value={value} onChange={handleChange}/>
+                <input className="ml-3 rounded bg-primary text-white border-white" type="submit"/>
             </form>
 
             {todos.map((todo, index) => (
