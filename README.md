@@ -4,7 +4,7 @@ Project ini munggunakan **Class Based** dan **Function Based**.
 Dan menggunakan framework CSS Bootstrap
 
 Berikut linknya :
-[Todo-Reactjs](todo-react-js.netlify.com)
+[Todo-Reactjs](https://todo-react-js.netlify.com)
 
 
 
