@@ -6,9 +6,7 @@ Dan menggunakan framework CSS Bootstrap
 Berikut linknya :
 [Todo-Reactjs](https://todo-react-js.netlify.com)
 
-
-
-
+# 
 
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
