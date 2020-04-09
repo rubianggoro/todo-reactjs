@@ -1,3 +1,16 @@
+# Project TODO ReactJS
+
+Project ini munggunakan **Class Based** dan **Function Based**.
+Dan menggunakan framework CSS Bootstrap
+
+Berikut linknya :
+[Todo-Reactjs](todo-react-js.netlify.com)
+
+
+
+
+
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
